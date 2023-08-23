@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Lexend Deca, sans-serif;
+  font-size: 15px;
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--transparent-white);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  border-radius: 8px;
+  overflow: hidden;
+  width: 900px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  padding: 35px;
+  display: grid;
+  grid-template-rows: 1fr 1fr 2fr 1fr;
+  align-items: start;
+}
+
+/* .icon {
+  
+} */
+
+.title {
+  font-family: Big Shoulders Display, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--very-light-gray);
+}
+
+.desc {
+  color: var(--transparent-white);
+  line-height: 1.5rem;
+}
+
+.learnMore-btn {
+  font-size: 0.8rem;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-weight: 600;
+  border: 2px solid var(--very-light-gray);
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.learnMore-btn:focus {
+  outline: none;
+}
+
+.learnMore-btn:active {
+  opacity: 0.5;
+}
+
+.button {
+  align-self: end;
+}
+
+.card:nth-child(1) .learnMore-btn {
+  color: var(--bright-orange);
+}
+
+.card:nth-child(2) .learnMore-btn {
+  color: var(--dark-cyan);
+}
+.card:nth-child(3) .learnMore-btn {
+  color: var(--very-dark-cyan);
+}
+
+.card:nth-child(1) .learnMore-btn:hover,
+.card:nth-child(2) .learnMore-btn:hover,
+.card:nth-child(3) .learnMore-btn:hover {
+  color: var(--very-light-gray);
+  background-color: transparent;
+}
+
+.card:nth-child(1) {
+  background-color: var(--bright-orange);
+}
+
+.card:nth-child(2) {
+  background-color: var(--dark-cyan);
+}
+
+.card:nth-child(3) {
+  background-color: var(--very-dark-cyan);
+}
+
+@media screen and (max-width: 375px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+}
+
+:root {
+  /* primary */
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+
+  /* secondary */
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --very-light-gray: hsl(0, 0%, 95%);
+}
